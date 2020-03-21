@@ -37,8 +37,7 @@ namespace csharplab03
                     Match match = csprojFilesRegex.Match(line);
                     if (match.Success)
                     {
-                        csprojFiles.Add(match.Groups[1].Value);
-                        //Console.WriteLine(match.Groups[1].Value);
+                        csprojFiles.Add(match.Groups[1].Value);                    
                     }
                 }
 
@@ -51,7 +50,6 @@ namespace csharplab03
                     if (match.Success)
                     {
                         dirs.Add(match.Groups[1].Value);
-                        //Console.WriteLine(match.Groups[1].Value);
                     }
                     else
                     {
@@ -104,9 +102,7 @@ namespace csharplab03
                 {
                     File.Copy(slnPath[0], slnFilePath + "\\Copy\\" + slnFileNameMatch.Groups[1].Value, true);
                 }
-                //File.Copy(slnPath[0], slnFilePath + "\\Copy\\" + slnPath[0], true);
-                
-                
+                                               
                 MessageBox.Show("Done.");
             }
         }
