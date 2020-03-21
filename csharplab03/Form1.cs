@@ -53,6 +53,10 @@ namespace csharplab03
                         dirs.Add(match.Groups[1].Value);
                         //Console.WriteLine(match.Groups[1].Value);
                     }
+                    else
+                    {
+                        dirs.Add("");
+                    }
                 }
 
                 System.IO.Directory.CreateDirectory(String.Format("{0}\\Copy", slnFilePath));
